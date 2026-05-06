@@ -70,21 +70,20 @@ const problems = [
 
 export default function ProblemSection() {
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
-      {/* Subtle bg accent */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-aqua-500 via-aqua-400 to-aqua-600" />
+    <section className="py-24 bg-gradient-to-b from-[#05223a] to-[#041a2f] relative overflow-hidden">
+      <div className="absolute inset-0 water-flow-lines opacity-60" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <AnimatedSection className="text-center mb-16" delay={0}>
-          <span className="inline-block bg-red-50 border border-red-100 text-red-500 text-sm font-semibold rounded-full px-4 py-1.5 mb-4">
+          <span className="inline-block bg-red-500/10 border border-red-300/20 text-red-200 text-sm font-semibold rounded-full px-4 py-1.5 mb-4">
             Erkennen Sie sich wieder?
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-navy-900 mb-4 leading-tight">
+          <h2 className="text-4xl sm:text-5xl font-black text-white mb-4 leading-tight">
             Was hartes Wasser{' '}
-            <span className="text-red-500">wirklich kostet</span>
+            <span className="text-red-300">wirklich kostet</span>
           </h2>
-          <p className="text-xl text-slate-500 max-w-2xl mx-auto">
+          <p className="text-xl text-white/70 max-w-2xl mx-auto">
             Hartes Wasser verursacht in Deutschland jedes Jahr Milliardenschäden.
             Die meisten Menschen merken es erst, wenn es zu spät ist.
           </p>
@@ -95,19 +94,19 @@ export default function ProblemSection() {
           {problems.map((p) => (
             <StaggerItem key={p.title}>
               <div
-                className={`group relative bg-gradient-to-br ${p.color} border ${p.border} rounded-2xl p-6 hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 cursor-default`}
+                className={`group relative bg-gradient-to-br ${p.color} border ${p.border} rounded-2xl p-6 hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 cursor-default backdrop-blur-md`}
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-11 h-11 bg-white rounded-xl flex items-center justify-center shadow-sm">
+                  <div className="w-11 h-11 bg-white/90 rounded-xl flex items-center justify-center shadow-sm">
                     <p.icon className={`w-5 h-5 ${p.iconColor}`} />
                   </div>
                   <div className="text-right">
                     <div className={`text-2xl font-black ${p.iconColor}`}>{p.stat}</div>
-                    <div className="text-slate-500 text-xs">{p.statLabel}</div>
+                    <div className="text-white/55 text-xs">{p.statLabel}</div>
                   </div>
                 </div>
-                <h3 className="text-navy-900 font-bold text-lg mb-2">{p.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{p.desc}</p>
+                <h3 className="text-white font-bold text-lg mb-2">{p.title}</h3>
+                <p className="text-white/80 text-sm leading-relaxed">{p.desc}</p>
               </div>
             </StaggerItem>
           ))}
@@ -115,11 +114,11 @@ export default function ProblemSection() {
 
         {/* CTA hint */}
         <AnimatedSection className="text-center mt-14" delay={0.2}>
-          <p className="text-slate-500 text-lg mb-2">
-            Die gute Nachricht: <span className="font-semibold text-navy-900">All das lässt sich mit einer Enthärtungsanlage lösen.</span>
+          <p className="text-white/70 text-lg mb-2">
+            Die gute Nachricht: <span className="font-semibold text-white">All das lasst sich mit einer Enthartungsanlage losen.</span>
           </p>
-          <p className="text-slate-400 text-sm">
-            Einmalige Investition → dauerhafter Schutz für Ihr Zuhause
+          <p className="text-white/45 text-sm">
+            Einmalige Investition -&gt; dauerhafter Schutz fur Ihr Zuhause
           </p>
         </AnimatedSection>
       </div>

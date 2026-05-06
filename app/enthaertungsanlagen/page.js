@@ -129,13 +129,13 @@ const faqs = [
 function FaqItem({ q, a }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border border-slate-100 rounded-2xl overflow-hidden">
+    <div className="border border-white/12 bg-[#082f4d]/70 rounded-2xl overflow-hidden backdrop-blur-md">
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between p-5 text-left hover:bg-slate-50 transition-colors"
+        className="w-full flex items-center justify-between p-5 text-left hover:bg-white/5 transition-colors"
       >
-        <span className="font-semibold text-navy-900 pr-4">{q}</span>
-        <ChevronDown className={`w-5 h-5 text-aqua-500 flex-shrink-0 transition-transform ${open ? 'rotate-180' : ''}`} />
+        <span className="font-semibold text-white pr-4">{q}</span>
+        <ChevronDown className={`w-5 h-5 text-aqua-300 flex-shrink-0 transition-transform ${open ? 'rotate-180' : ''}`} />
       </button>
       <AnimatePresence>
         {open && (
@@ -145,7 +145,7 @@ function FaqItem({ q, a }) {
             exit={{ height: 0, opacity: 0 }}
             className="overflow-hidden"
           >
-            <p className="px-5 pb-5 text-slate-600 leading-relaxed">{a}</p>
+            <p className="px-5 pb-5 text-white/70 leading-relaxed">{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -205,14 +205,14 @@ export default function EnthaertungsanlagenPage() {
       </section>
 
       {/* NEO Serie */}
-      <section id="neo" className="py-20 bg-slate-50">
+      <section id="neo" className="py-20 bg-gradient-to-b from-[#0a3558] to-[#082b46]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="mb-12">
             <div className="flex items-end justify-between flex-wrap gap-4">
               <div>
-                <span className="text-aqua-600 font-bold text-sm uppercase tracking-wider">AquaTime NEO</span>
-                <h2 className="text-4xl font-black text-navy-900 mt-1">Die NEO Produktlinie</h2>
-                <p className="text-slate-500 mt-2 max-w-xl">
+                <span className="text-aqua-300 font-bold text-sm uppercase tracking-wider">AquaTime NEO</span>
+                <h2 className="text-4xl font-black text-white mt-1">Die NEO Produktlinie</h2>
+                <p className="text-white/70 mt-2 max-w-xl">
                   Kompaktes Kabinettgehäuse mit BNT-Steuerventil. Vollautomatisch, platzsparend und für jeden Haushalt erhältlich.
                 </p>
               </div>
@@ -294,12 +294,12 @@ export default function EnthaertungsanlagenPage() {
       </section>
 
       {/* CosmosBlue Serie */}
-      <section id="cosmosblue" className="py-20 bg-white">
+      <section id="cosmosblue" className="py-20 bg-gradient-to-b from-[#072742] to-[#052138]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="mb-12">
-            <span className="text-aqua-600 font-bold text-sm uppercase tracking-wider">AquaTime CosmosBlue</span>
-            <h2 className="text-4xl font-black text-navy-900 mt-1 mb-2">Premium Enthärtungsanlagen</h2>
-            <p className="text-slate-500 max-w-xl">
+            <span className="text-aqua-300 font-bold text-sm uppercase tracking-wider">AquaTime CosmosBlue</span>
+            <h2 className="text-4xl font-black text-white mt-1 mb-2">Premium Enthartungsanlagen</h2>
+            <p className="text-white/70 max-w-xl">
               Für höchste Ansprüche. Mit hochwertigen Clack-Steuerventilen, maximaler Effizienz und langer Lebensdauer.
             </p>
           </AnimatedSection>
@@ -351,11 +351,11 @@ export default function EnthaertungsanlagenPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-gradient-to-b from-[#06243d] to-[#031a2f]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-10">
-            <h2 className="text-3xl font-black text-navy-900 mb-3">Häufige Fragen</h2>
-            <p className="text-slate-500">Alles was Sie über Enthärtungsanlagen wissen müssen.</p>
+            <h2 className="text-3xl font-black text-white mb-3">Haufige Fragen</h2>
+            <p className="text-white/70">Alles was Sie uber Enthartungsanlagen wissen mussen.</p>
           </AnimatedSection>
           <div className="space-y-3">
             {faqs.map((faq) => (

@@ -58,18 +58,18 @@ const products = [
 
 export default function ProductsPreview() {
   return (
-    <section className="py-24 bg-slate-50 relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-b from-[#083255] to-[#062841] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <AnimatedSection className="text-center mb-14">
-          <span className="inline-block bg-aqua-50 border border-aqua-200 text-aqua-700 text-sm font-semibold rounded-full px-4 py-1.5 mb-4">
+          <span className="inline-block bg-aqua-500/12 border border-aqua-300/20 text-aqua-200 text-sm font-semibold rounded-full px-4 py-1.5 mb-4">
             Unsere Bestseller
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-navy-900 mb-4 leading-tight">
-            Die richtige Anlage für{' '}
-            <span className="text-aqua-600">Ihr Zuhause</span>
+          <h2 className="text-4xl sm:text-5xl font-black text-white mb-4 leading-tight">
+            Die richtige Anlage fur{' '}
+            <span className="text-aqua-300">Ihr Zuhause</span>
           </h2>
-          <p className="text-xl text-slate-500 max-w-xl mx-auto">
+          <p className="text-xl text-white/70 max-w-xl mx-auto">
             Von der Einzel-Person bis zur Großfamilie – wir haben die passende Lösung.
           </p>
         </AnimatedSection>
@@ -151,7 +151,7 @@ export default function ProductsPreview() {
         <AnimatedSection className="text-center" delay={0.3}>
           <Link
             href="/enthaertungsanlagen"
-            className="inline-flex items-center gap-2 text-aqua-600 hover:text-aqua-500 font-semibold text-lg transition-colors group"
+            className="inline-flex items-center gap-2 text-aqua-200 hover:text-aqua-100 font-semibold text-lg transition-colors group"
           >
             Alle Produkte ansehen
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

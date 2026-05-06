@@ -82,17 +82,17 @@ function StarRating({ rating }) {
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-slate-50 relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-b from-[#06253c] to-[#031b2f] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <AnimatedSection className="text-center mb-14">
-          <span className="inline-block bg-yellow-50 border border-yellow-200 text-yellow-700 text-sm font-semibold rounded-full px-4 py-1.5 mb-4">
+          <span className="inline-block bg-yellow-400/10 border border-yellow-300/20 text-yellow-200 text-sm font-semibold rounded-full px-4 py-1.5 mb-4">
             ⭐ Kundenstimmen
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-navy-900 mb-4">
+          <h2 className="text-4xl sm:text-5xl font-black text-white mb-4">
             Was unsere Kunden sagen
           </h2>
-          <p className="text-xl text-slate-500 max-w-xl mx-auto">
+          <p className="text-xl text-white/70 max-w-xl mx-auto">
             Über 500 zufriedene Familien. Lesen Sie, was sie über AquaTime berichten.
           </p>
           <div className="flex items-center justify-center gap-2 mt-4">
@@ -101,8 +101,8 @@ export default function Testimonials() {
                 <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
               ))}
             </div>
-            <span className="text-navy-900 font-bold text-lg">4.9</span>
-            <span className="text-slate-500">/ 5 (312 Bewertungen)</span>
+            <span className="text-white font-bold text-lg">4.9</span>
+            <span className="text-white/60">/ 5 (312 Bewertungen)</span>
           </div>
         </AnimatedSection>
 
@@ -111,8 +111,8 @@ export default function Testimonials() {
           {reviews.map((r) => (
             <StaggerItem key={r.name} direction="up">
               <div
-                className={`bg-white rounded-2xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 ${
-                  r.featured ? 'ring-2 ring-aqua-200 border-aqua-100' : 'border border-slate-100'
+                className={`bg-[#0a304d]/70 rounded-2xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 backdrop-blur-md ${
+                  r.featured ? 'ring-2 ring-aqua-300/35 border-aqua-200/25' : 'border border-white/12'
                 }`}
               >
                 {r.featured && (
@@ -128,23 +128,23 @@ export default function Testimonials() {
                       {r.avatar}
                     </div>
                     <div>
-                      <div className="font-bold text-navy-900">{r.name}</div>
-                      <div className="flex items-center gap-1 text-slate-400 text-xs">
+                      <div className="font-bold text-white">{r.name}</div>
+                      <div className="flex items-center gap-1 text-white/60 text-xs">
                         <MapPin className="w-3 h-3" />
                         {r.location}
                       </div>
                     </div>
                   </div>
-                  <span className="text-slate-400 text-xs">{r.date}</span>
+                  <span className="text-white/45 text-xs">{r.date}</span>
                 </div>
 
                 <StarRating rating={r.rating} />
 
-                <p className="text-slate-600 text-sm leading-relaxed mt-3 mb-4">
+                <p className="text-white/75 text-sm leading-relaxed mt-3 mb-4">
                   &ldquo;{r.text}&rdquo;
                 </p>
 
-                <div className="pt-3 border-t border-slate-50">
+                <div className="pt-3 border-t border-white/10">
                   <span className="text-xs text-aqua-600 font-semibold">
                     Gekauftes Produkt: {r.product}
                   </span>
@@ -156,7 +156,7 @@ export default function Testimonials() {
 
         {/* Trust badges */}
         <AnimatedSection className="mt-14" delay={0.2}>
-          <div className="bg-white rounded-2xl border border-slate-100 shadow-card p-8">
+          <div className="bg-[#0a304d]/70 rounded-2xl border border-white/12 shadow-card p-8 backdrop-blur-md">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 items-center justify-items-center">
               {[
                 { label: 'Google', rating: '4.9★', reviews: '180+' },
@@ -165,9 +165,9 @@ export default function Testimonials() {
                 { label: 'Empfehlungen', rating: '98%', reviews: 'der Kunden' },
               ].map((b) => (
                 <div key={b.label} className="text-center">
-                  <div className="text-2xl font-black text-navy-900">{b.rating}</div>
-                  <div className="text-aqua-600 font-semibold text-sm">{b.label}</div>
-                  <div className="text-slate-400 text-xs">{b.reviews}</div>
+                  <div className="text-2xl font-black text-white">{b.rating}</div>
+                  <div className="text-aqua-200 font-semibold text-sm">{b.label}</div>
+                  <div className="text-white/55 text-xs">{b.reviews}</div>
                 </div>
               ))}
             </div>

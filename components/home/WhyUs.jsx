@@ -64,18 +64,18 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-b from-[#0a2f4d] to-[#07253d] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <AnimatedSection className="text-center mb-16">
-          <span className="inline-block bg-navy-900/5 border border-navy-900/10 text-navy-700 text-sm font-semibold rounded-full px-4 py-1.5 mb-4">
+          <span className="inline-block bg-white/8 border border-white/10 text-aqua-200 text-sm font-semibold rounded-full px-4 py-1.5 mb-4">
             Warum AquaTime?
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-navy-900 mb-4 leading-tight">
-            Nicht nur ein Produkt –<br />
-            <span className="text-aqua-600">ein Rundum-Service</span>
+          <h2 className="text-4xl sm:text-5xl font-black text-white mb-4 leading-tight">
+            Nicht nur ein Produkt,<br />
+            <span className="text-aqua-300">ein Rundum-Service</span>
           </h2>
-          <p className="text-xl text-slate-500 max-w-2xl mx-auto">
+          <p className="text-xl text-white/70 max-w-2xl mx-auto">
             Von der Beratung über die Installation bis zum Wartungsservice –
             wir begleiten Sie auf dem gesamten Weg zu weichem Wasser.
           </p>
@@ -85,12 +85,12 @@ export default function WhyUs() {
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" stagger={0.07}>
           {reasons.map((r) => (
             <StaggerItem key={r.title}>
-              <div className="group p-6 rounded-2xl border border-slate-100 hover:border-aqua-100 hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 bg-white">
+              <div className="group p-6 rounded-2xl border border-white/12 hover:border-aqua-200/35 hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 bg-[#0a304d]/65 backdrop-blur-md">
                 <div className={`w-12 h-12 ${r.bg} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                   <r.icon className={`w-5 h-5 ${r.color}`} />
                 </div>
-                <h3 className="text-navy-900 font-bold text-base mb-2">{r.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed">{r.desc}</p>
+                <h3 className="text-white font-bold text-base mb-2">{r.title}</h3>
+                <p className="text-white/70 text-sm leading-relaxed">{r.desc}</p>
               </div>
             </StaggerItem>
           ))}

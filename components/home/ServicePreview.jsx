@@ -38,20 +38,20 @@ const serviceHighlights = [
 
 export default function ServicePreview() {
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-b from-[#083354] to-[#06273f] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Content */}
           <div>
             <AnimatedSection direction="left">
-              <span className="inline-block bg-aqua-50 border border-aqua-200 text-aqua-700 text-sm font-semibold rounded-full px-4 py-1.5 mb-5">
+              <span className="inline-block bg-aqua-500/10 border border-aqua-200/30 text-aqua-200 text-sm font-semibold rounded-full px-4 py-1.5 mb-5">
                 Service & Montage
               </span>
-              <h2 className="text-4xl sm:text-5xl font-black text-navy-900 mb-5 leading-tight">
-                Wir kümmern uns um{' '}
-                <span className="text-aqua-600">alles</span>
+              <h2 className="text-4xl sm:text-5xl font-black text-white mb-5 leading-tight">
+                Wir kummern uns um{' '}
+                <span className="text-aqua-300">alles</span>
               </h2>
-              <p className="text-xl text-slate-500 mb-8 leading-relaxed">
+              <p className="text-xl text-white/75 mb-8 leading-relaxed">
                 Von der Beratung bis zur Inbetriebnahme – unser Team aus erfahrenen
                 Technikern sorgt für eine saubere, fachgerechte Installation.
               </p>
@@ -61,7 +61,7 @@ export default function ServicePreview() {
                 {serviceHighlights.map((h) => (
                   <div key={h} className="flex items-center gap-2.5">
                     <CheckCircle className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                    <span className="text-slate-700 text-sm font-medium">{h}</span>
+                    <span className="text-white/85 text-sm font-medium">{h}</span>
                   </div>
                 ))}
               </div>
@@ -85,7 +85,7 @@ export default function ServicePreview() {
                 </Link>
                 <Link
                   href="/kontakt"
-                  className="inline-flex items-center justify-center gap-2 border border-slate-200 text-slate-700 hover:border-aqua-300 hover:text-aqua-600 px-6 py-3.5 rounded-xl font-semibold transition-all"
+                  className="inline-flex items-center justify-center gap-2 border border-white/30 text-white hover:border-aqua-300 hover:text-aqua-100 px-6 py-3.5 rounded-xl font-semibold transition-all"
                 >
                   Termin anfragen
                 </Link>
