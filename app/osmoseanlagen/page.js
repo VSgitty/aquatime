@@ -83,29 +83,30 @@ export default function OsmoseanlagenPage() {
       </section>
 
       {/* Product Spotlight */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-b from-[#082c49] to-[#06233c] relative overflow-hidden">
+        <div className="absolute inset-0 water-flow-lines opacity-60" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection direction="left">
-              <span className="inline-block bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full mb-4">
+              <span className="inline-block bg-emerald-500/10 border border-emerald-300/30 text-emerald-200 text-xs font-bold px-3 py-1 rounded-full mb-4">
                 #1 OSMOSEANLAGE
               </span>
-              <h2 className="text-4xl sm:text-5xl font-black text-navy-900 mb-4">
+              <h2 className="text-4xl sm:text-5xl font-black text-white mb-4">
                 AquaTime Trinity
               </h2>
-              <p className="text-xl text-slate-500 mb-6 leading-relaxed">
+              <p className="text-xl text-white/75 mb-6 leading-relaxed">
                 Unsere leistungsstärkste Osmoseanlage. Kompakt genug für jeden Unterschrank,
                 leistungsstark genug für die ganze Familie.
               </p>
 
               <div className="flex items-baseline gap-2 mb-2">
-                <span className="text-slate-400 text-lg line-through">599,00 €</span>
-                <span className="bg-red-50 text-red-500 font-bold text-sm px-2.5 py-0.5 rounded-lg">-37%</span>
+                <span className="text-white/45 text-lg line-through">599,00 EUR</span>
+                <span className="bg-red-500/15 text-red-200 font-bold text-sm px-2.5 py-0.5 rounded-lg">-37%</span>
               </div>
               <div className="flex items-baseline gap-2 mb-6">
-                <span className="text-5xl font-black text-navy-900">378,97</span>
-                <span className="text-aqua-600 text-2xl font-bold">€</span>
-                <span className="text-slate-400 text-sm">inkl. MwSt.</span>
+                <span className="text-5xl font-black text-white">378,97</span>
+                <span className="text-aqua-300 text-2xl font-bold">EUR</span>
+                <span className="text-white/45 text-sm">inkl. MwSt.</span>
               </div>
 
               <div className="space-y-3 mb-8">
@@ -119,7 +120,7 @@ export default function OsmoseanlagenPage() {
                 ].map((f) => (
                   <div key={f} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0" />
-                    <span className="text-slate-700 font-medium">{f}</span>
+                    <span className="text-white/85 font-medium">{f}</span>
                   </div>
                 ))}
               </div>
@@ -134,7 +135,7 @@ export default function OsmoseanlagenPage() {
                 </Link>
                 <a
                   href="tel:060737433137"
-                  className="inline-flex items-center justify-center gap-2 border border-slate-200 text-slate-700 px-7 py-3.5 rounded-xl font-semibold hover:border-aqua-300 hover:text-aqua-600 transition-all"
+                  className="inline-flex items-center justify-center gap-2 border border-white/30 text-white px-7 py-3.5 rounded-xl font-semibold hover:border-aqua-300 hover:text-aqua-100 transition-all"
                 >
                   <Phone className="w-4 h-4" />
                   Beratung anfordern
@@ -178,23 +179,23 @@ export default function OsmoseanlagenPage() {
       </section>
 
       {/* Features */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-gradient-to-b from-[#072641] to-[#051f35]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
-            <h2 className="text-4xl font-black text-navy-900 mb-3">
+            <h2 className="text-4xl font-black text-white mb-3">
               6 Gründe für die Trinity
             </h2>
-            <p className="text-slate-500 max-w-xl mx-auto">
+            <p className="text-white/70 max-w-xl mx-auto">
               Technologie die überzeugt – von der Filtergröße bis zum Display.
             </p>
           </AnimatedSection>
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" stagger={0.08}>
             {trinityFeatures.map((f) => (
               <StaggerItem key={f.title}>
-                <div className="bg-white rounded-2xl border border-slate-100 p-6 hover:border-emerald-200 hover:shadow-card-hover transition-all hover:-translate-y-1 group">
+                <div className="bg-white/8 rounded-2xl border border-white/12 p-6 hover:border-emerald-200/50 hover:shadow-card-hover transition-all hover:-translate-y-1 group backdrop-blur-md">
                   <div className="text-3xl mb-4 group-hover:scale-110 transition-transform inline-block">{f.icon}</div>
-                  <h3 className="text-navy-900 font-bold text-lg mb-2">{f.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed">{f.desc}</p>
+                  <h3 className="text-white font-bold text-lg mb-2">{f.title}</h3>
+                  <p className="text-white/70 text-sm leading-relaxed">{f.desc}</p>
                 </div>
               </StaggerItem>
             ))}
@@ -203,13 +204,13 @@ export default function OsmoseanlagenPage() {
       </section>
 
       {/* Comparison */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-b from-[#041e34] to-[#031a2f]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-10">
-            <h2 className="text-4xl font-black text-navy-900 mb-3">
+            <h2 className="text-4xl font-black text-white mb-3">
               Trinity vs. Alternatives
             </h2>
-            <p className="text-slate-500">Vergleich: Leitungswasser, Flaschenwasser, AquaTime Trinity</p>
+            <p className="text-white/70">Vergleich: Leitungswasser, Flaschenwasser, AquaTime Trinity</p>
           </AnimatedSection>
           <AnimatedSection delay={0.15}>
             <div className="bg-navy-950 rounded-3xl overflow-hidden border border-white/8">

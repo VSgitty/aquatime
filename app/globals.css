@@ -201,6 +201,20 @@ h1, h2, h3, h4, h5, h6 {
   animation: rippleFloat 11s ease-in-out infinite;
 }
 
+.water-bubbles {
+  position: absolute;
+  inset: 0;
+}
+
+.water-bubbles span {
+  position: absolute;
+  bottom: -40px;
+  border-radius: 9999px;
+  border: 1px solid rgba(165, 243, 252, 0.22);
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.35), rgba(125, 211, 252, 0.03));
+  animation: bubbleRise linear infinite;
+}
+
 .water-rings span:nth-child(1) {
   width: 560px;
   height: 560px;
@@ -265,6 +279,23 @@ h1, h2, h3, h4, h5, h6 {
   }
   100% {
     transform: translateY(8%);
+  }
+}
+
+@keyframes bubbleRise {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.45;
+  }
+  80% {
+    opacity: 0.25;
+  }
+  100% {
+    transform: translateY(-105vh) scale(1.1);
+    opacity: 0;
   }
 }
 

@@ -79,21 +79,21 @@ export default function UeberUnsPage() {
       </section>
 
       {/* Mission */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-b from-[#082d4b] to-[#06233c]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection direction="left">
-              <span className="text-aqua-600 font-bold text-sm uppercase tracking-wider">Unsere Mission</span>
-              <h2 className="text-4xl font-black text-navy-900 mt-2 mb-4">
+              <span className="text-aqua-300 font-bold text-sm uppercase tracking-wider">Unsere Mission</span>
+              <h2 className="text-4xl font-black text-white mt-2 mb-4">
                 Wasser ist Leben –<br />
                 machen Sie es rein.
               </h2>
-              <p className="text-slate-600 leading-relaxed mb-5">
+              <p className="text-white/75 leading-relaxed mb-5">
                 AquaTime GmbH wurde 2014 in Babenhausen, Hessen, mit einer klaren Vision gegründet:
                 Jedem Haushalt in Deutschland Zugang zu professioneller Wasseraufbereitung zu ermöglichen –
                 zu fairen Preisen und mit persönlichem Service.
               </p>
-              <p className="text-slate-600 leading-relaxed mb-8">
+              <p className="text-white/75 leading-relaxed mb-8">
                 Wir sind kein anonymes Online-Versandhaus. Wir sind ein lokales Unternehmen mit echten
                 Menschen, die sich für Ihr Wohlbefinden und das Ihrer Familie einsetzen.
               </p>
@@ -104,9 +104,9 @@ export default function UeberUnsPage() {
                   { val: '800+', label: 'Installationen' },
                   { val: '4.9★', label: 'Bewertung' },
                 ].map((s) => (
-                  <div key={s.label} className="bg-slate-50 rounded-2xl p-4">
+                  <div key={s.label} className="bg-white/10 border border-white/12 rounded-2xl p-4 backdrop-blur-md">
                     <div className="text-3xl font-black text-aqua-600 mb-1">{s.val}</div>
-                    <div className="text-slate-500 text-sm">{s.label}</div>
+                    <div className="text-white/65 text-sm">{s.label}</div>
                   </div>
                 ))}
               </div>
@@ -149,19 +149,19 @@ export default function UeberUnsPage() {
       </section>
 
       {/* Values */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-gradient-to-b from-[#06253d] to-[#041c31]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
-            <h2 className="text-4xl font-black text-navy-900 mb-3">Unsere Werte</h2>
-            <p className="text-slate-500">Das sind die Prinzipien, die uns täglich antreiben.</p>
+            <h2 className="text-4xl font-black text-white mb-3">Unsere Werte</h2>
+            <p className="text-white/70">Das sind die Prinzipien, die uns taglich antreiben.</p>
           </AnimatedSection>
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" stagger={0.08}>
             {values.map((v) => (
               <StaggerItem key={v.title}>
-                <div className="bg-white rounded-2xl border border-slate-100 p-6 text-center hover:border-aqua-200 hover:shadow-card transition-all hover:-translate-y-1">
+                <div className="bg-white/8 rounded-2xl border border-white/12 p-6 text-center hover:border-aqua-200/40 hover:shadow-card transition-all hover:-translate-y-1 backdrop-blur-md">
                   <div className="text-4xl mb-4">{v.icon}</div>
-                  <h3 className="text-navy-900 font-black text-xl mb-2">{v.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed">{v.desc}</p>
+                  <h3 className="text-white font-black text-xl mb-2">{v.title}</h3>
+                  <p className="text-white/70 text-sm leading-relaxed">{v.desc}</p>
                 </div>
               </StaggerItem>
             ))}
@@ -200,20 +200,20 @@ export default function UeberUnsPage() {
       </section>
 
       {/* Team */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-b from-[#072a46] to-[#041f35]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
-            <h2 className="text-4xl font-black text-navy-900 mb-3">Unser Team</h2>
-            <p className="text-slate-500">Menschen mit Leidenschaft für sauberes Wasser.</p>
+            <h2 className="text-4xl font-black text-white mb-3">Unser Team</h2>
+            <p className="text-white/70">Menschen mit Leidenschaft fur sauberes Wasser.</p>
           </AnimatedSection>
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-3 gap-6" stagger={0.1}>
             {team.map((t) => (
               <StaggerItem key={t.name}>
-                <div className="bg-slate-50 rounded-3xl p-8 text-center border border-slate-100 hover:border-aqua-200 hover:shadow-card transition-all">
+                <div className="bg-white/8 rounded-3xl p-8 text-center border border-white/12 hover:border-aqua-200/40 hover:shadow-card transition-all backdrop-blur-md">
                   <div className="text-5xl mb-4">{t.emoji}</div>
-                  <h3 className="text-navy-900 font-black text-xl mb-1">{t.name}</h3>
-                  <div className="text-aqua-600 font-semibold text-sm mb-3">{t.role}</div>
-                  <p className="text-slate-500 text-sm leading-relaxed">{t.desc}</p>
+                  <h3 className="text-white font-black text-xl mb-1">{t.name}</h3>
+                  <div className="text-aqua-200 font-semibold text-sm mb-3">{t.role}</div>
+                  <p className="text-white/70 text-sm leading-relaxed">{t.desc}</p>
                 </div>
               </StaggerItem>
             ))}
@@ -222,7 +222,7 @@ export default function UeberUnsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-aqua-600 text-center">
+      <section className="py-16 bg-gradient-to-r from-[#0b3f63] to-[#0b5f86] text-center">
         <div className="max-w-2xl mx-auto px-4">
           <h3 className="text-3xl font-black text-white mb-3">Lernen Sie uns kennen</h3>
           <p className="text-aqua-100 mb-8">
@@ -231,7 +231,7 @@ export default function UeberUnsPage() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href="tel:060737433137"
-              className="inline-flex items-center justify-center gap-2 bg-white text-aqua-700 px-6 py-3.5 rounded-xl font-bold hover:bg-aqua-50 transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-white/12 border border-white/20 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-white/20 transition-colors"
             >
               <Phone className="w-4 h-4" />
               06073 743 3137

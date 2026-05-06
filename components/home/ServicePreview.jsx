@@ -67,11 +67,11 @@ export default function ServicePreview() {
               </div>
 
               {/* Location badge */}
-              <div className="flex items-center gap-3 bg-slate-50 border border-slate-100 rounded-2xl px-5 py-3 mb-8 w-fit">
+              <div className="flex items-center gap-3 bg-white/8 border border-white/15 rounded-2xl px-5 py-3 mb-8 w-fit backdrop-blur-md">
                 <MapPin className="w-4 h-4 text-aqua-500" />
                 <div>
-                  <div className="text-navy-900 font-semibold text-sm">Direkter Einsatz aus Babenhausen</div>
-                  <div className="text-slate-500 text-xs">für ganz Deutschland</div>
+                  <div className="text-white font-semibold text-sm">Direkter Einsatz aus Babenhausen</div>
+                  <div className="text-white/65 text-xs">fur ganz Deutschland</div>
                 </div>
               </div>
 
@@ -99,17 +99,17 @@ export default function ServicePreview() {
               {serviceSteps.map((s, i) => (
                 <div
                   key={s.title}
-                  className="flex gap-4 bg-slate-50 hover:bg-aqua-50 border border-slate-100 hover:border-aqua-200 rounded-2xl p-5 transition-all group"
+                  className="flex gap-4 bg-white/8 hover:bg-white/12 border border-white/15 hover:border-aqua-200/50 rounded-2xl p-5 transition-all group backdrop-blur-md"
                 >
-                  <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-2xl flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-white/90 rounded-xl shadow-sm flex items-center justify-center text-2xl flex-shrink-0 group-hover:scale-110 transition-transform">
                     {s.icon}
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-1">
                       <span className="text-aqua-600 font-black text-xs">0{i + 1}</span>
-                      <h3 className="text-navy-900 font-bold">{s.title}</h3>
+                      <h3 className="text-white font-bold">{s.title}</h3>
                     </div>
-                    <p className="text-slate-500 text-sm leading-relaxed">{s.desc}</p>
+                    <p className="text-white/70 text-sm leading-relaxed">{s.desc}</p>
                   </div>
                 </div>
               ))}

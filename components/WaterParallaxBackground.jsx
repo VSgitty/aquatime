@@ -14,6 +14,21 @@ export default function WaterParallaxBackground() {
       <motion.div style={{ y: midLayerY }} className="water-parallax-layer water-parallax-mid" />
       <motion.div style={{ y: glowLayerY }} className="water-parallax-layer water-parallax-glow" />
 
+      <div className="water-bubbles">
+        {Array.from({ length: 16 }).map((_, idx) => (
+          <span
+            key={idx}
+            style={{
+              left: `${(idx * 11) % 100}%`,
+              width: `${8 + ((idx * 3) % 12)}px`,
+              height: `${8 + ((idx * 3) % 12)}px`,
+              animationDelay: `${idx * 1.1}s`,
+              animationDuration: `${16 + (idx % 6)}s`,
+            }}
+          />
+        ))}
+      </div>
+
       <div className="water-rings">
         <span />
         <span />
