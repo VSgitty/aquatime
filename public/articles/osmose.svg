@@ -1,0 +1,18 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Osmoseanlage Illustration</title>
+  <desc id="desc">Abstrakte Kuechennahe Wassertechnik in Blau und Tuerkis</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0%" stop-color="#031a2f" />
+      <stop offset="45%" stop-color="#0a3a5d" />
+      <stop offset="100%" stop-color="#0f84b2" />
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)" />
+  <rect x="260" y="220" width="880" height="460" rx="40" fill="#d5f3ff" fill-opacity="0.12" stroke="#bdefff" stroke-opacity="0.25" />
+  <rect x="360" y="310" width="220" height="280" rx="28" fill="#9ee8ff" fill-opacity="0.2" />
+  <rect x="630" y="310" width="410" height="110" rx="20" fill="#9ee8ff" fill-opacity="0.14" />
+  <rect x="630" y="460" width="410" height="90" rx="20" fill="#9ee8ff" fill-opacity="0.1" />
+  <circle cx="1020" cy="610" r="42" fill="#a7f3ff" fill-opacity="0.3" />
+  <path d="M140 760 C340 660 520 840 720 760 C940 670 1120 850 1320 760" stroke="#aef0ff" stroke-opacity="0.32" stroke-width="14" fill="none" />
+</svg>

@@ -1,0 +1,19 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Wartung Illustration</title>
+  <desc id="desc">Abstrakte Service-Szene fuer Wassertechnik</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#022038" />
+      <stop offset="50%" stop-color="#0a446a" />
+      <stop offset="100%" stop-color="#168bb8" />
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)" />
+  <circle cx="260" cy="210" r="120" fill="#a7f3ff" fill-opacity="0.14" />
+  <circle cx="1180" cy="300" r="170" fill="#7dd3fc" fill-opacity="0.16" />
+  <path d="M360 640 L520 420 L760 620 L980 370 L1140 560" stroke="#c7f3ff" stroke-opacity="0.45" stroke-width="18" fill="none" stroke-linecap="round" />
+  <rect x="330" y="300" width="740" height="360" rx="30" fill="#d8f6ff" fill-opacity="0.09" stroke="#bcecff" stroke-opacity="0.22" />
+  <circle cx="560" cy="470" r="48" fill="#d8f6ff" fill-opacity="0.28" />
+  <circle cx="770" cy="520" r="38" fill="#d8f6ff" fill-opacity="0.22" />
+  <circle cx="920" cy="460" r="26" fill="#d8f6ff" fill-opacity="0.24" />
+</svg>

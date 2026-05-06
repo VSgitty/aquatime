@@ -17,6 +17,7 @@ const footerLinks = {
     { href: '/kontakt', label: 'Kontakt aufnehmen' },
   ],
   info: [
+    { href: '/artikel', label: 'Artikel & Ratgeber' },
     { href: '/ueber-uns', label: 'Über AquaTime' },
     { href: '/versand', label: 'Versand & Lieferung' },
     { href: '/faq', label: 'FAQ' },

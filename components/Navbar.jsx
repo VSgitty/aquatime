@@ -17,6 +17,7 @@ const navLinks = [
   },
   { href: '/osmoseanlagen', label: 'Osmoseanlagen' },
   { href: '/service', label: 'Service & Montage' },
+  { href: '/artikel', label: 'Artikel' },
   { href: '/ueber-uns', label: 'Über uns' },
   { href: '/kontakt', label: 'Kontakt' },
 ];

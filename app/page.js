@@ -7,6 +7,7 @@ import Stats from '@/components/home/Stats';
 import Testimonials from '@/components/home/Testimonials';
 import HardnessCalculator from '@/components/home/HardnessCalculator';
 import ServicePreview from '@/components/home/ServicePreview';
+import ArticlesPreview from '@/components/home/ArticlesPreview';
 import CTASection from '@/components/home/CTASection';
 
 export const metadata = {
@@ -27,6 +28,7 @@ export default function Home() {
       <Testimonials />
       <HardnessCalculator />
       <ServicePreview />
+      <ArticlesPreview />
       <CTASection />
     </>
   );

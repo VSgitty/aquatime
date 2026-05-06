@@ -1,0 +1,21 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Kosten durch Kalk Illustration</title>
+  <desc id="desc">Abstrakte Kosten- und Energiekurve im Wasserdesign</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#021a30" />
+      <stop offset="50%" stop-color="#0b3658" />
+      <stop offset="100%" stop-color="#0f739c" />
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)" />
+  <path d="M170 650 C340 610 470 700 610 620 C760 540 850 600 980 490 C1090 400 1170 430 1260 350" stroke="#b9efff" stroke-opacity="0.6" stroke-width="16" fill="none" stroke-linecap="round" />
+  <g fill="#dff7ff" fill-opacity="0.2">
+    <rect x="240" y="320" width="140" height="260" rx="16" />
+    <rect x="430" y="260" width="140" height="320" rx="16" />
+    <rect x="620" y="380" width="140" height="200" rx="16" />
+    <rect x="810" y="220" width="140" height="360" rx="16" />
+    <rect x="1000" y="280" width="140" height="300" rx="16" />
+  </g>
+  <circle cx="1110" cy="170" r="120" fill="#9ee6ff" fill-opacity="0.16" />
+</svg>
