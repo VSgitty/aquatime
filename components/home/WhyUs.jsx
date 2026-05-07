@@ -64,33 +64,61 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section className="py-24 bg-gradient-to-b from-[#0a2f4d] to-[#07253d] relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+    <section className="py-28 bg-[#03111d] relative overflow-hidden">
+      <div className="absolute inset-0 hero-mesh opacity-50" />
+      <div className="absolute top-12 right-[10%] w-80 h-80 rounded-full bg-cyan-400/10 blur-[130px]" />
+      <div className="absolute bottom-0 left-[8%] w-96 h-96 rounded-full bg-emerald-400/8 blur-[140px]" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">
-          <span className="inline-block bg-white/8 border border-white/10 text-aqua-200 text-sm font-semibold rounded-full px-4 py-1.5 mb-4">
+          <span className="inline-block bg-white/8 border border-white/10 text-aqua-100 text-sm font-semibold rounded-full px-4 py-1.5 mb-4 backdrop-blur-xl">
             Warum AquaTime?
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-white mb-4 leading-tight">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-[-0.05em] text-white mb-4 leading-[0.95]">
             Nicht nur ein Produkt,<br />
-            <span className="text-aqua-300">ein Rundum-Service</span>
+            <span className="bg-gradient-to-r from-aqua-200 via-cyan-200 to-emerald-200 bg-clip-text text-transparent">ein Rundum-Service</span>
           </h2>
-          <p className="text-xl text-white/70 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-white/68 max-w-3xl mx-auto leading-relaxed">
             Von der Beratung über die Installation bis zum Wartungsservice –
             wir begleiten Sie auf dem gesamten Weg zu weichem Wasser.
           </p>
         </AnimatedSection>
 
-        {/* Grid */}
+        <AnimatedSection className="mb-10">
+          <div className="rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.03))] backdrop-blur-2xl p-6 md:p-8 shadow-[0_28px_100px_rgba(1,8,18,0.42)]">
+            <div className="grid md:grid-cols-[1.05fr_0.95fr] gap-6 items-center">
+              <div>
+                <div className="text-white/40 text-xs uppercase tracking-[0.28em] mb-3">Premium Betreuung statt Standard-Shop</div>
+                <h3 className="text-2xl md:text-3xl font-black tracking-[-0.04em] text-white mb-3">
+                  Beratung, Montage und Service muessen so stark sein wie das Produkt selbst.
+                </h3>
+                <p className="text-white/62 leading-relaxed max-w-2xl">
+                  AquaTime verkauft nicht nur Technik. Wir liefern Planungssicherheit, professionelle Installation und einen lokalen Ansprechpartner fuer den gesamten Lebenszyklus der Anlage.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 backdrop-blur-xl">
+                  <div className="text-3xl font-black text-aqua-200 tracking-[-0.05em]">24-72h</div>
+                  <div className="text-white/55 text-sm mt-1">typische Lieferzeit</div>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 backdrop-blur-xl">
+                  <div className="text-3xl font-black text-emerald-200 tracking-[-0.05em]">2-3h</div>
+                  <div className="text-white/55 text-sm mt-1">typische Installationsdauer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" stagger={0.07}>
           {reasons.map((r) => (
             <StaggerItem key={r.title}>
-              <div className="group p-6 rounded-2xl border border-white/12 hover:border-aqua-200/35 hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 bg-[#0a304d]/65 backdrop-blur-md">
-                <div className={`w-12 h-12 ${r.bg} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+              <div className="group p-6 rounded-[1.75rem] border border-white/10 hover:border-white/18 transition-all duration-300 hover:-translate-y-1.5 bg-[linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.03))] backdrop-blur-2xl shadow-[0_24px_90px_rgba(1,8,18,0.35)]">
+                <div className={`w-12 h-12 ${r.bg} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-sm`}>
                   <r.icon className={`w-5 h-5 ${r.color}`} />
                 </div>
                 <h3 className="text-white font-bold text-base mb-2">{r.title}</h3>
-                <p className="text-white/70 text-sm leading-relaxed">{r.desc}</p>
+                <p className="text-white/66 text-sm leading-relaxed">{r.desc}</p>
               </div>
             </StaggerItem>
           ))}

@@ -10,18 +10,20 @@ export default function ArticlesPreview() {
   const articles = getAllArticles().slice(0, 3);
 
   return (
-    <section className="py-24 bg-gradient-to-b from-[#06253d] to-[#041b2f] relative overflow-hidden">
-      <div className="absolute inset-0 water-flow-lines opacity-55" />
+    <section className="py-28 bg-[#041526] relative overflow-hidden">
+      <div className="absolute inset-0 hero-mesh opacity-45" />
+      <div className="absolute inset-0 water-flow-lines opacity-18" />
+      <div className="absolute top-8 right-[8%] w-80 h-80 rounded-full bg-cyan-400/8 blur-[130px]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-12">
-          <span className="inline-block bg-aqua-500/12 border border-aqua-200/30 text-aqua-200 text-sm font-semibold rounded-full px-4 py-1.5 mb-4">
+          <span className="inline-block bg-white/8 border border-white/10 text-aqua-100 text-sm font-semibold rounded-full px-4 py-1.5 mb-4 backdrop-blur-xl">
             Wissen & Praxis
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-[-0.05em] text-white mb-4 leading-[0.95]">
             Aktuelle Artikel
           </h2>
-          <p className="text-white/70 max-w-2xl mx-auto text-lg">
+          <p className="text-white/68 max-w-2xl mx-auto text-lg leading-relaxed">
             Kompakte Antworten auf die wichtigsten Fragen zu Wasserhaerte, Osmose und Anlagenbetrieb.
           </p>
         </AnimatedSection>
@@ -29,7 +31,7 @@ export default function ArticlesPreview() {
         <StaggerContainer className="grid md:grid-cols-3 gap-6" stagger={0.08}>
           {articles.map((article) => (
             <StaggerItem key={article.slug}>
-              <article className="h-full bg-white/8 border border-white/12 rounded-3xl overflow-hidden backdrop-blur-md hover:border-aqua-200/45 hover:-translate-y-1 transition-all">
+              <article className="h-full bg-[linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.03))] border border-white/10 rounded-[1.75rem] overflow-hidden backdrop-blur-2xl hover:border-white/18 hover:-translate-y-1.5 transition-all shadow-[0_24px_90px_rgba(1,8,18,0.35)]">
                 <div className="relative aspect-[4/3]">
                   <Image
                     src={article.image}
@@ -38,7 +40,7 @@ export default function ArticlesPreview() {
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#041a2e]/55 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#041a2e]/78 via-[#041a2e]/18 to-transparent" />
                 </div>
 
                 <div className="p-5">
@@ -58,7 +60,7 @@ export default function ArticlesPreview() {
 
                   <Link
                     href={`/artikel/${article.slug}`}
-                    className="inline-flex items-center gap-1.5 text-aqua-200 hover:text-aqua-100 text-sm font-semibold"
+                    className="inline-flex items-center gap-1.5 text-aqua-100 hover:text-white text-sm font-semibold"
                   >
                     Weiterlesen
                     <ArrowRight className="w-4 h-4" />
@@ -72,7 +74,7 @@ export default function ArticlesPreview() {
         <AnimatedSection className="text-center mt-10" delay={0.2}>
           <Link
             href="/artikel"
-            className="inline-flex items-center gap-2 text-aqua-100 hover:text-white font-semibold text-lg transition-colors"
+            className="inline-flex items-center gap-2 text-aqua-100 hover:text-white font-semibold text-lg transition-colors bg-white/6 border border-white/10 rounded-full px-6 py-3 backdrop-blur-xl"
           >
             Alle Artikel anzeigen
             <ArrowRight className="w-5 h-5" />

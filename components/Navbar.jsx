@@ -38,12 +38,12 @@ export default function Navbar() {
   return (
     <>
       {/* Top bar */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-aqua-600 text-white py-1.5 text-center text-sm">
-        <span className="hidden sm:inline">💧 Kostenlose Beratung & Angebote: </span>
+      <div className="fixed top-0 left-0 right-0 z-50 bg-[#04131d]/68 backdrop-blur-2xl border-b border-white/8 text-white py-1.5 text-center text-sm shadow-[0_10px_35px_rgba(1,8,18,0.35)]">
+        <span className="hidden sm:inline text-white/75">Kostenlose Beratung & Angebote: </span>
         <a href="tel:060737433137" className="font-bold hover:underline">
           06073 743 3137
         </a>
-        <span className="hidden md:inline"> · Deutschlandweite Lieferung & Montage</span>
+        <span className="hidden md:inline text-white/50"> · Deutschlandweite Lieferung & Montage</span>
       </div>
 
       <motion.header
@@ -52,22 +52,22 @@ export default function Navbar() {
         transition={{ duration: 0.5, ease: 'easeOut' }}
         className={`fixed top-8 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? 'bg-navy-950/95 backdrop-blur-xl shadow-xl shadow-black/30 border-b border-white/5'
-            : 'bg-transparent'
+            ? 'bg-[#03111b]/78 backdrop-blur-2xl shadow-[0_18px_60px_rgba(1,8,18,0.55)] border-b border-white/8'
+            : 'bg-[#03111b]/28 backdrop-blur-xl border-b border-white/6'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2.5 group">
-              <div className="w-9 h-9 bg-gradient-to-br from-aqua-400 to-aqua-600 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform">
+              <div className="w-10 h-10 bg-gradient-to-br from-aqua-300 via-sky-400 to-emerald-300 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform shadow-[0_16px_35px_rgba(56,189,248,0.28)]">
                 <Droplets className="w-5 h-5 text-white" />
               </div>
               <div className="flex flex-col leading-none">
-                <span className="text-white font-black text-lg tracking-tight">
-                  AQUA<span className="text-aqua-400">TIME</span>
+                <span className="text-white font-black text-lg tracking-[-0.04em]">
+                  AQUA<span className="text-emerald-200">TIME</span>
                 </span>
-                <span className="text-white/40 text-[9px] uppercase tracking-widest font-medium">
+                <span className="text-white/40 text-[9px] uppercase tracking-[0.3em] font-medium">
                   Wasseraufbereitung
                 </span>
               </div>
@@ -84,7 +84,7 @@ export default function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className="flex items-center gap-1 text-white/75 hover:text-white px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-white/5"
+                    className="flex items-center gap-1 text-white/70 hover:text-white px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-white/6"
                   >
                     {link.label}
                     {link.sub && (
@@ -104,13 +104,13 @@ export default function Navbar() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 8, scale: 0.97 }}
                         transition={{ duration: 0.15 }}
-                        className="absolute top-full left-0 mt-1 w-52 bg-navy-900/98 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl overflow-hidden"
+                        className="absolute top-full left-0 mt-2 w-52 bg-[#05131f]/96 backdrop-blur-2xl rounded-2xl border border-white/10 shadow-2xl overflow-hidden"
                       >
                         {link.sub.map((item) => (
                           <Link
                             key={item.href}
                             href={item.href}
-                            className="block px-4 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
+                            className="block px-4 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/6 transition-colors"
                           >
                             {item.label}
                           </Link>
@@ -134,7 +134,7 @@ export default function Navbar() {
               </a>
               <Link
                 href="/kontakt"
-                className="bg-gradient-to-r from-aqua-500 to-aqua-600 hover:from-aqua-400 hover:to-aqua-500 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-aqua-500/30 hover:-translate-y-0.5"
+                className="bg-gradient-to-r from-aqua-300 via-cyan-300 to-emerald-200 hover:from-white hover:via-aqua-200 hover:to-emerald-100 text-[#031828] px-5 py-2.5 rounded-2xl text-sm font-bold transition-all duration-300 hover:shadow-[0_20px_55px_rgba(125,211,252,0.35)] hover:-translate-y-0.5"
               >
                 Kostenlos beraten
               </Link>
@@ -158,7 +158,7 @@ export default function Navbar() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-navy-950/98 backdrop-blur-xl border-t border-white/10 overflow-hidden"
+              className="lg:hidden bg-[#03111b]/96 backdrop-blur-2xl border-t border-white/10 overflow-hidden"
             >
               <div className="px-4 py-5 space-y-1">
                 {navLinks.map((link, i) => (

@@ -66,34 +66,31 @@ export default function HardnessCalculator() {
       : hardnessLevels[3];
 
   return (
-    <section className="py-24 bg-navy-950 relative overflow-hidden" id="rechner">
-      <div className="absolute inset-0 grid-pattern" />
-      <div className="glow-orb w-[500px] h-[500px] bg-aqua-600/8 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+    <section className="py-28 bg-[#020814] relative overflow-hidden" id="rechner">
+      <div className="absolute inset-0 hero-mesh opacity-45" />
+      <div className="absolute top-8 left-[8%] w-80 h-80 rounded-full bg-cyan-400/8 blur-[130px]" />
+      <div className="absolute bottom-0 right-[8%] w-96 h-96 rounded-full bg-emerald-400/8 blur-[140px]" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <AnimatedSection className="text-center mb-12">
-          <span className="inline-flex items-center gap-2 bg-aqua-500/10 border border-aqua-500/20 text-aqua-400 text-sm font-semibold rounded-full px-4 py-1.5 mb-4">
+          <span className="inline-flex items-center gap-2 bg-white/8 border border-white/10 text-aqua-100 text-sm font-semibold rounded-full px-4 py-1.5 mb-4 backdrop-blur-xl">
             <Calculator className="w-4 h-4" />
             Interaktiver Rechner
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-4 tracking-[-0.05em] leading-[0.95]">
             Welche Anlage passt<br />
             <span className="gradient-text">zu Ihrem Haushalt?</span>
           </h2>
-          <p className="text-xl text-white/50 max-w-xl mx-auto">
+          <p className="text-lg sm:text-xl text-white/58 max-w-2xl mx-auto leading-relaxed">
             Geben Sie einfach Ihren Wasserverbrauch und die Wasserhärte ein –
             wir empfehlen die optimale Anlage.
           </p>
         </AnimatedSection>
 
-        {/* Calculator card */}
         <AnimatedSection delay={0.15}>
-          <div className="bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-10 backdrop-blur-xl">
+          <div className="rounded-[2rem] p-8 sm:p-10 border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.03))] backdrop-blur-2xl shadow-[0_28px_100px_rgba(1,8,18,0.4)]">
             <div className="grid md:grid-cols-2 gap-10">
-              {/* Left: Inputs */}
               <div className="space-y-8">
-                {/* Persons slider */}
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <label className="text-white font-semibold flex items-center gap-2">
@@ -114,7 +111,6 @@ export default function HardnessCalculator() {
                     <span>1 Person</span>
                     <span>12 Personen</span>
                   </div>
-                  {/* Person icons */}
                   <div className="flex flex-wrap gap-1 mt-3">
                     {Array.from({ length: 12 }).map((_, i) => (
                       <span
@@ -127,7 +123,6 @@ export default function HardnessCalculator() {
                   </div>
                 </div>
 
-                {/* Hardness slider */}
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <label className="text-white font-semibold flex items-center gap-2">
@@ -162,10 +157,9 @@ export default function HardnessCalculator() {
                   </div>
                 </div>
 
-                {/* Hardness levels legend */}
                 <div className="grid grid-cols-2 gap-2">
                   {hardnessLevels.map((h) => (
-                    <div key={h.label} className="flex items-center gap-2 bg-white/3 rounded-xl px-3 py-2">
+                    <div key={h.label} className="flex items-center gap-2 bg-white/4 border border-white/8 rounded-xl px-3 py-2 backdrop-blur-xl">
                       <span className={`w-2 h-2 rounded-full ${h.color.replace('text-', 'bg-')}`} />
                       <span className={`text-xs font-medium ${h.color}`}>{h.label}</span>
                       <span className="text-white/30 text-xs">{h.range}</span>
@@ -175,14 +169,13 @@ export default function HardnessCalculator() {
 
                 <button
                   onClick={() => setShowResult(true)}
-                  className="w-full bg-gradient-to-r from-aqua-500 to-aqua-600 hover:from-aqua-400 hover:to-aqua-500 text-white py-4 rounded-2xl font-bold text-lg transition-all hover:shadow-glow hover:-translate-y-0.5 flex items-center justify-center gap-2"
+                  className="w-full bg-gradient-to-r from-aqua-300 via-cyan-300 to-emerald-200 hover:from-white hover:via-aqua-200 hover:to-emerald-100 text-[#031828] py-4 rounded-2xl font-bold text-lg transition-all hover:-translate-y-0.5 flex items-center justify-center gap-2 shadow-[0_24px_65px_rgba(125,211,252,0.25)]"
                 >
                   <Calculator className="w-5 h-5" />
                   Anlage berechnen
                 </button>
               </div>
 
-              {/* Right: Result */}
               <div className="flex flex-col justify-center">
                 <AnimatePresence mode="wait">
                   {!showResult ? (
@@ -193,7 +186,7 @@ export default function HardnessCalculator() {
                       exit={{ opacity: 0 }}
                       className="text-center py-10"
                     >
-                      <div className="w-20 h-20 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <div className="w-20 h-20 bg-white/6 border border-white/10 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-xl">
                         <Calculator className="w-10 h-10 text-white/20" />
                       </div>
                       <p className="text-white/30 text-sm">
@@ -221,7 +214,7 @@ export default function HardnessCalculator() {
                       exit={{ opacity: 0 }}
                       transition={{ type: 'spring', stiffness: 200, damping: 20 }}
                     >
-                      <div className="bg-gradient-to-br from-aqua-900/50 to-navy-800/50 border border-aqua-500/30 rounded-2xl p-6 mb-5">
+                      <div className="bg-[linear-gradient(180deg,rgba(8,25,42,0.75),rgba(5,16,29,0.75))] border border-aqua-300/25 rounded-[1.75rem] p-6 mb-5 shadow-[0_24px_80px_rgba(1,8,18,0.35)]">
                         <div className="flex items-center gap-2 mb-4">
                           <CheckCircle className="w-5 h-5 text-emerald-400" />
                           <span className="text-emerald-400 font-bold text-sm">Empfehlung für Sie</span>
@@ -231,17 +224,17 @@ export default function HardnessCalculator() {
                         <div className="text-aqua-400 font-semibold mb-4">{rec.desc}</div>
 
                         <div className="grid grid-cols-2 gap-3 mb-5">
-                          <div className="bg-white/5 rounded-xl p-3 text-center">
+                          <div className="bg-white/5 border border-white/8 rounded-xl p-3 text-center backdrop-blur-xl">
                             <div className="text-aqua-400 font-black text-xl">{rec.persons === 99 ? '12+' : `bis ${rec.persons}`}</div>
                             <div className="text-white/50 text-xs">Personen</div>
                           </div>
-                          <div className="bg-white/5 rounded-xl p-3 text-center">
+                          <div className="bg-white/5 border border-white/8 rounded-xl p-3 text-center backdrop-blur-xl">
                             <div className="text-aqua-400 font-black text-xl">{rec.price} €</div>
                             <div className="text-white/50 text-xs">inkl. MwSt.</div>
                           </div>
                         </div>
 
-                        <div className="bg-white/5 rounded-xl p-3 mb-4">
+                        <div className="bg-white/5 border border-white/8 rounded-xl p-3 mb-4 backdrop-blur-xl">
                           <p className="text-white/60 text-xs leading-relaxed">
                             Basierend auf <strong className="text-white">{persons} {persons === 1 ? 'Person' : 'Personen'}</strong> und{' '}
                             <strong className={hardnessLabel.color}>{hardness}°dH ({hardnessLabel.label}em Wasser)</strong> empfehlen wir diese Anlage für optimale Leistung.
@@ -250,7 +243,7 @@ export default function HardnessCalculator() {
 
                         <Link
                           href="/kontakt"
-                          className="flex items-center justify-center gap-2 bg-aqua-500 hover:bg-aqua-400 text-white py-3 rounded-xl font-bold transition-all text-sm"
+                          className="flex items-center justify-center gap-2 bg-gradient-to-r from-aqua-300 via-cyan-300 to-emerald-200 text-[#031828] py-3 rounded-xl font-bold transition-all text-sm"
                         >
                           Unverbindlich anfragen
                           <ChevronRight className="w-4 h-4" />

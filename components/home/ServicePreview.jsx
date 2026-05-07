@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowRight, Wrench, CheckCircle, Clock, MapPin } from 'lucide-react';
-import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/AnimatedSection';
+import { ArrowRight, CheckCircle, Clock, MapPin } from 'lucide-react';
+import { AnimatedSection } from '@/components/ui/AnimatedSection';
 
 const serviceSteps = [
   {
@@ -38,36 +38,37 @@ const serviceHighlights = [
 
 export default function ServicePreview() {
   return (
-    <section className="py-24 bg-gradient-to-b from-[#083354] to-[#06273f] relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-28 bg-[#03111d] relative overflow-hidden">
+      <div className="absolute inset-0 hero-mesh opacity-45" />
+      <div className="absolute top-0 left-[8%] w-80 h-80 rounded-full bg-cyan-400/8 blur-[130px]" />
+      <div className="absolute bottom-0 right-[8%] w-96 h-96 rounded-full bg-emerald-400/8 blur-[140px]" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Content */}
           <div>
             <AnimatedSection direction="left">
-              <span className="inline-block bg-aqua-500/10 border border-aqua-200/30 text-aqua-200 text-sm font-semibold rounded-full px-4 py-1.5 mb-5">
+              <span className="inline-block bg-white/8 border border-white/10 text-aqua-100 text-sm font-semibold rounded-full px-4 py-1.5 mb-5 backdrop-blur-xl">
                 Service & Montage
               </span>
-              <h2 className="text-4xl sm:text-5xl font-black text-white mb-5 leading-tight">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-5 leading-[0.95] tracking-[-0.05em]">
                 Wir kummern uns um{' '}
-                <span className="text-aqua-300">alles</span>
+                <span className="gradient-text">alles</span>
               </h2>
-              <p className="text-xl text-white/75 mb-8 leading-relaxed">
+              <p className="text-lg sm:text-xl text-white/68 mb-8 leading-relaxed max-w-2xl">
                 Von der Beratung bis zur Inbetriebnahme – unser Team aus erfahrenen
                 Technikern sorgt für eine saubere, fachgerechte Installation.
               </p>
 
-              {/* Highlights */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-8">
                 {serviceHighlights.map((h) => (
-                  <div key={h} className="flex items-center gap-2.5">
+                  <div key={h} className="flex items-center gap-2.5 rounded-xl border border-white/8 bg-white/5 px-3 py-3 backdrop-blur-xl">
                     <CheckCircle className="w-4 h-4 text-emerald-500 flex-shrink-0" />
                     <span className="text-white/85 text-sm font-medium">{h}</span>
                   </div>
                 ))}
               </div>
 
-              {/* Location badge */}
-              <div className="flex items-center gap-3 bg-white/8 border border-white/15 rounded-2xl px-5 py-3 mb-8 w-fit backdrop-blur-md">
+              <div className="flex items-center gap-3 bg-white/8 border border-white/10 rounded-2xl px-5 py-3 mb-8 w-fit backdrop-blur-xl">
                 <MapPin className="w-4 h-4 text-aqua-500" />
                 <div>
                   <div className="text-white font-semibold text-sm">Direkter Einsatz aus Babenhausen</div>
@@ -78,14 +79,14 @@ export default function ServicePreview() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/service"
-                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-aqua-500 to-aqua-600 text-white px-6 py-3.5 rounded-xl font-bold hover:from-aqua-400 hover:to-aqua-500 transition-all hover:shadow-glow hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-aqua-300 via-cyan-300 to-emerald-200 text-[#031828] px-6 py-3.5 rounded-2xl font-bold transition-all hover:-translate-y-0.5 shadow-[0_24px_65px_rgba(125,211,252,0.25)]"
                 >
                   Mehr zum Service
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/kontakt"
-                  className="inline-flex items-center justify-center gap-2 border border-white/30 text-white hover:border-aqua-300 hover:text-aqua-100 px-6 py-3.5 rounded-xl font-semibold transition-all"
+                  className="inline-flex items-center justify-center gap-2 border border-white/14 bg-white/6 text-white hover:border-aqua-300 hover:text-aqua-100 px-6 py-3.5 rounded-2xl font-semibold transition-all backdrop-blur-xl"
                 >
                   Termin anfragen
                 </Link>
@@ -93,13 +94,12 @@ export default function ServicePreview() {
             </AnimatedSection>
           </div>
 
-          {/* Right: Process steps */}
           <AnimatedSection direction="right" delay={0.1}>
             <div className="space-y-4">
               {serviceSteps.map((s, i) => (
                 <div
                   key={s.title}
-                  className="flex gap-4 bg-white/8 hover:bg-white/12 border border-white/15 hover:border-aqua-200/50 rounded-2xl p-5 transition-all group backdrop-blur-md"
+                  className="flex gap-4 bg-[linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.03))] border border-white/10 hover:border-white/18 rounded-[1.75rem] p-5 transition-all group backdrop-blur-2xl shadow-[0_24px_90px_rgba(1,8,18,0.35)]"
                 >
                   <div className="w-12 h-12 bg-white/90 rounded-xl shadow-sm flex items-center justify-center text-2xl flex-shrink-0 group-hover:scale-110 transition-transform">
                     {s.icon}
@@ -114,7 +114,7 @@ export default function ServicePreview() {
                 </div>
               ))}
 
-              <div className="bg-navy-950 rounded-2xl p-5 flex items-center gap-4">
+              <div className="bg-[#081523] border border-white/10 rounded-[1.75rem] p-5 flex items-center gap-4 backdrop-blur-2xl">
                 <Clock className="w-8 h-8 text-aqua-400 flex-shrink-0" />
                 <div>
                   <div className="text-white font-bold">Schnelle Montage</div>
