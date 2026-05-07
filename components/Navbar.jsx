@@ -4,8 +4,10 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone, ChevronDown, Droplets } from 'lucide-react';
+import MiniCartLink from '@/components/shop/MiniCartLink';
 
 const navLinks = [
+  { href: '/produkte', label: 'Shop' },
   {
     href: '/enthaertungsanlagen',
     label: 'Enthärtungsanlagen',
@@ -118,6 +120,7 @@ export default function Navbar() {
                   </AnimatePresence>
                 </div>
               ))}
+              <MiniCartLink />
             </nav>
 
             {/* Right CTAs */}
@@ -174,6 +177,7 @@ export default function Navbar() {
                     </Link>
                   </motion.div>
                 ))}
+                <MiniCartLink mobile onClick={() => setIsMobileOpen(false)} />
                 <div className="pt-3 border-t border-white/10 space-y-3">
                   <a
                     href="tel:060737433137"

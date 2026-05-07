@@ -3,11 +3,12 @@ import { Droplets, Phone, Mail, MapPin, Facebook, Instagram, Youtube } from 'luc
 
 const footerLinks = {
   produkte: [
+    { href: '/produkte', label: 'Alle Produkte' },
     { href: '/enthaertungsanlagen', label: 'Enthärtungsanlagen' },
     { href: '/enthaertungsanlagen#neo', label: 'NEO Serie' },
     { href: '/enthaertungsanlagen#cosmosblue', label: 'CosmosBlue Serie' },
     { href: '/osmoseanlagen', label: 'Osmoseanlagen' },
-    { href: '/enthaertungsanlagen#zubehoer', label: 'Anlagenzubehör' },
+    { href: '/produkte', label: 'Anlagenzubehör' },
   ],
   service: [
     { href: '/service', label: 'Montage & Installation' },

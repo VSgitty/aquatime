@@ -150,7 +150,7 @@ export default function ProductsPreview() {
         {/* View all */}
         <AnimatedSection className="text-center" delay={0.3}>
           <Link
-            href="/enthaertungsanlagen"
+            href="/produkte"
             className="inline-flex items-center gap-2 text-aqua-200 hover:text-aqua-100 font-semibold text-lg transition-colors group"
           >
             Alle Produkte ansehen
